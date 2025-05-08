@@ -150,3 +150,36 @@ Stores transaction details.
 **Relationships**:
 
 - A payment is associated with a single booking.
+
+## Feature Breakdown
+
+This section outlines the main features that make up the Airbnb Clone backend and how each contributes to the functionality of the platform.
+
+### 1. API Documentation
+
+The backend APIs are documented using the **OpenAPI standard**, ensuring they are clear, consistent, and easy to integrate. The project supports both RESTful APIs via **Django REST Framework (DRF)** and flexible data querying through **GraphQL**, making it adaptable to various frontend needs.
+
+### 2. User Authentication
+
+Endpoints: `/users/`, `/users/{user_id}/`  
+This feature allows users to register, log in, and manage their profiles. Secure authentication mechanisms ensure only authorized users can access and update their data.
+
+### 3. Property Management
+
+Endpoints: `/properties/`, `/properties/{property_id}/`  
+Hosts can list properties, update details, view listings, or delete them. This system allows effective management of accommodation offerings on the platform.
+
+### 4. Booking System
+
+Endpoints: `/bookings/`, `/bookings/{booking_id}/`  
+Users can make reservations for listed properties, as well as view and manage their bookings. It includes handling of check-in/check-out data to streamline the reservation lifecycle.
+
+### 5. Payment Processing
+
+Endpoints: `/payments/`  
+Handles secure processing of payments related to bookings. It ensures transactions are recorded and linked to the appropriate user and booking data.
+
+### 6. Review System
+
+Endpoints: `/reviews/`, `/reviews/{review_id}/`  
+Allows guests to leave feedback and rate properties after their stay. This builds trust in the platform and helps future users make informed decisions.
