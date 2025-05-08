@@ -1,19 +1,31 @@
 # airbnb-clone-project
 
-The Airbnb Clone Project Blueprint
-This is a clone of the AirBnB website, focusing on the backend structure. It is a learning project to understand backend development
+The Airbnb Clone Project Blueprint is a clone of the AirBnB website, focusing on the backend structure. It is a learning project to understand backend development. It is designed to provide a robust and scalable foundation for managing user interactions, property listings, bookings, and payments.
 
 ## Goals
 
-- Recreate core backend functionalities of AirBnB
-- Build a command interpreter for object management
+Recreate core functionalities of AirBnB, which includes:
 
-## Tech Stack
+- **User Management**: Implement a secure system for user registration,
+- **Property Management**: Develop features for property listing creation, updates, and retrieval.
+- **Booking System**: Create a booking mechanism for users to reserve properties and manage booking details.
+- **Payment Processing**: Integrate a payment system to handle transactions and record payment details.
 
-- Python (Backend logic)
-- Django (Web framework)
-- MySQL (Database)
-- Git/GitHub (Version control)
+## Technology Stack
+
+This project utilizes a modern and powerful technology stack to build a robust and scalable Airbnb clone:
+
+- **Python**: The core programming language used to develop the backend logic and server-side functionality.
+
+- **Django**: A high-level Python web framework that simplifies the creation of complex, secure, and maintainable web applications. It’s used for handling URL routing, views, models, and admin interfaces.
+
+- **Django REST Framework (DRF)**: An extension of Django that provides tools and libraries to build and manage RESTful APIs. It handles authentication, serialization, and response formatting.
+
+- **PostgreSQL**: A reliable and powerful open-source relational database system used to store and manage structured data for the application.
+
+- **GraphQL**: A query language for APIs that enables clients to request only the data they need. It provides flexibility and efficiency in data retrieval, especially useful in complex frontends.
+
+- **Git/GitHub**: Used for version control and collaboration. Git tracks changes in the source code, while GitHub hosts the project repository and facilitates team collaboration.
 
 ## Team Roles
 
