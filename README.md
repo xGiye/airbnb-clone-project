@@ -209,3 +209,17 @@ All inputs to the API are validated and sanitized to prevent injection attacks a
 All API communications are encrypted using HTTPS, ensuring that sensitive data such as passwords and payment information is securely transmitted over the network.
 
 Implementing these measures helps safeguard sensitive user information, prevent fraud, and maintain system stability and availability.
+
+## CI/CD Pipeline
+
+Continuous Integration (CI) and Continuous Deployment (CD) are essential practices in modern software development that automate the building, testing, and deployment of applications. CI ensures that code changes are automatically tested and integrated into the main branch frequently, while CD automates the deployment of the application to various environments.
+
+Implementing a CI/CD pipeline in this project ensures rapid and reliable delivery of new features, reduces bugs, and enhances collaboration within the team.
+
+### Tools Used:
+
+- **GitHub Actions**: Automates testing, linting, and deployment directly from the GitHub repository.
+- **Docker**: Provides containerization to ensure consistency across development, testing, and production environments.
+- **Heroku / AWS / DigitalOcean (Optional)**: Can be used as deployment targets for staging and production environments.
+
+These tools together improve the project's agility, quality, and maintainability by enabling continuous feedback and streamlined workflows.
