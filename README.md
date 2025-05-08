@@ -64,3 +64,89 @@ This project utilizes a modern and powerful technology stack to build a robust a
 ### 9. DevOps Engineer
 
 - **Responsibilities**: Automates infrastructure deployment, manages CI/CD pipelines, and ensures the application runs smoothly in different environments.
+
+## Database Design
+
+The database schema is designed to support key Airbnb-like functionalities. The main entities and their relationships are outlined below:
+
+### 1. Users
+
+Stores data for guests and hosts.
+
+- `id` (Primary Key)
+- `name`
+- `email` (unique)
+- `password_hash`
+- `is_host` (boolean)
+
+**Relationships**:
+
+- A user can list multiple properties (1-to-many).
+- A user can make multiple bookings (1-to-many).
+- A user can write multiple reviews (1-to-many).
+
+---
+
+### 2. Properties
+
+Represents property listings created by hosts.
+
+- `id` (Primary Key)
+- `host_id` (Foreign Key to Users)
+- `title`
+- `location`
+- `price_per_night`
+
+**Relationships**:
+
+- A property belongs to one host.
+- A property can have multiple bookings.
+- A property can have multiple reviews.
+
+---
+
+### 3. Bookings
+
+Captures reservation data.
+
+- `id` (Primary Key)
+- `user_id` (Foreign Key to Users)
+- `property_id` (Foreign Key to Properties)
+- `check_in_date`
+- `check_out_date`
+
+**Relationships**:
+
+- A booking is made by one user for one property.
+
+---
+
+### 4. Reviews
+
+User feedback on a property.
+
+- `id` (Primary Key)
+- `user_id` (Foreign Key to Users)
+- `property_id` (Foreign Key to Properties)
+- `rating`
+- `comment`
+
+**Relationships**:
+
+- A review is made by one user for one property.
+
+---
+
+### 5. Payments
+
+Stores transaction details.
+
+- `id` (Primary Key)
+- `booking_id` (Foreign Key to Bookings)
+- `payment_date`
+- `amount`
+- `payment_method`
+
+**Relationships**:
+
+- A payment is associated with a single booking.
