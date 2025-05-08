@@ -183,3 +183,29 @@ Handles secure processing of payments related to bookings. It ensures transactio
 
 Endpoints: `/reviews/`, `/reviews/{review_id}/`  
 Allows guests to leave feedback and rate properties after their stay. This builds trust in the platform and helps future users make informed decisions.
+
+## API Security
+
+Securing the backend APIs is essential to protect user data, ensure the integrity of transactions, and maintain trust in the platform. This project implements several key security measures:
+
+### 1. Authentication
+
+We use secure token-based authentication (e.g., JWT) to ensure that only verified users can access protected endpoints. This prevents unauthorized users from performing actions such as booking properties or accessing payment details.
+
+### 2. Authorization
+
+Role-based access control (RBAC) ensures that users only have access to the features and data they are permitted to use. For example, only property owners can update or delete their listings, while guests can only manage their own bookings.
+
+### 3. Rate Limiting
+
+To protect against abuse, such as denial-of-service (DoS) attacks or brute-force login attempts, the API implements rate limiting. This limits the number of requests a user or IP can make within a given time frame.
+
+### 4. Data Validation and Sanitization
+
+All inputs to the API are validated and sanitized to prevent injection attacks and ensure the integrity of the data stored in the database.
+
+### 5. HTTPS Enforcement
+
+All API communications are encrypted using HTTPS, ensuring that sensitive data such as passwords and payment information is securely transmitted over the network.
+
+Implementing these measures helps safeguard sensitive user information, prevent fraud, and maintain system stability and availability.
